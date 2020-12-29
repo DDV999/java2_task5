@@ -2,17 +2,8 @@ import java.util.Scanner;
 
 public class Calculator extends Base {
     static Scanner scanner = new Scanner(System.in);
-    private int result;
 
     public Calculator() {};
-
-    public Calculator(int result) {
-        this.result = result;
-    }
-
-    public int getResult() {
-        return result;
-    }
 
     public int setResult(int firstNumber, int secondNumber, char operation) {
         int result;
@@ -52,7 +43,7 @@ public class Calculator extends Base {
     }
 
     private static int multiplication(int num1, int num2) {
-        return  num1 * num2;
+        return num1 * num2;
     }
 
     private static int divide(int num1, int num2) {
