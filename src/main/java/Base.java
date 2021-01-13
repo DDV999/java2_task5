@@ -5,7 +5,11 @@ public class Base {
         int numberTwo = num.setInputNumber();
         Calculator calculator = new Calculator();
         char operation = calculator.getOperation();
-        int result = calculator.setResult(numberOne, numberTwo, operation);
-        System.out.println("Результат: " + result);
+        try {
+            int result = calculator.setResult(numberOne, numberTwo, operation);
+            System.out.println("Результат: " + result);
+        } catch (ArithmeticException e){
+            System.out.println("Ошибка деления на 0: " + e.getMessage());
+        }
     }
 }
