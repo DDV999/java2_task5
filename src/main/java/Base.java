@@ -1,5 +1,5 @@
 public class Base {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         Numbers num = new Numbers();
         int numberOne = num.setInputNumber();
         int numberTwo = num.setInputNumber();

@@ -5,7 +5,7 @@ public class Calculator extends Base {
 
     public Calculator() {};
 
-    public int setResult(int firstNumber, int secondNumber, char operation) {
+    public int setResult(int firstNumber, int secondNumber, char operation) throws Exception {
         int result;
         switch (operation) {
             case '+':
@@ -21,7 +21,7 @@ public class Calculator extends Base {
                 result = divide(firstNumber, secondNumber);
                 break;
             default:
-                System.out.println("Неизвестная операция. Повторите ввод!");
+                System.out.println("Неизвестная операция или недоступна. Повторите ввод!");
                 result = setResult(firstNumber, secondNumber, getOperation());
         }
         return result;
@@ -31,6 +31,13 @@ public class Calculator extends Base {
         System.out.print("Введите операцию: ");
         char operation;
         operation = scanner.next().charAt(0);
+        try {
+            if (operation == '%') {
+                throw new Exception("Данный функционал отсутствует. Выберите '/', '*', '+' или '-'");
+            }
+        } catch (Exception e){
+            System.out.println(e.getMessage());
+        }
         return operation;
     }
 
