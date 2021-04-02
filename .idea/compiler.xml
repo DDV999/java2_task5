@@ -9,5 +9,8 @@
         <module name="java2_task5" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="java2_task5" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
